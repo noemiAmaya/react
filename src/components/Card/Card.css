@@ -1,0 +1,27 @@
+.Card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 900px;
+    padding: 16px;
+}
+
+.Card-conten {
+    text-align: left;
+}
+
+.style-category{
+    color:rgb(138, 138, 138);
+    font-size: 16px;
+}
+
+.style-title{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.Card-image{
+    width: 160px;
+    height: 140px;
+    margin-right: 24px;
+}
