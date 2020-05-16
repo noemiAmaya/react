@@ -1,0 +1,71 @@
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+  }
+  
+.Card {
+    max-width: 720px;
+    color: rgba(0, 0, 0, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+
+}
+.Card .Card-content{
+    width: 100%;
+    line-height:16px;
+    padding: 16px;
+}
+.Card .Card-content .Card-category {
+    text-transform: uppercase;
+    color:rgba(0,0,0,.54);
+    margin: 2px;
+}
+.Card .Card-content .Card-title {
+    font-weight: bolder;
+    font-size: 24px;
+    color:rgba(0,0,0,.84);
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.Card-article .Card-content .Card-description {
+    color: rgba(0,0,0,.54);
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.Card-article .Card-content .Card-various .Card-author {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    
+}
+.Card-article .Card-content .Card-various .Card-author:hover {
+    text-decoration: underline;
+}
+.Card-article .Card-content .Card-various .Card-date-read{
+    font-weight: 400;
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
+}
+
+.Card-article .Card-content .Card-various .Card-date-read  {
+    font-size: 11px;
+}
+
+.Card-article .Card-content .Card-various {
+    display:flex;
+    justify-content: space-between;
+}
+
+.Card-image img{
+    height: 115px;
+    width: 140px;
+}
+
+.Card-article .Card-content .Card-various .Card-icons{
+    font-size: 18px;
+    color:rgba(0,0,0,.68)
+}
+
+
