@@ -1,12 +1,10 @@
-ul {
+ ul {
     margin: 0;
   }
-  ​
   a {
     color: #ffffff;
     text-decoration: none;
-  }
-  ​
+  } 
   .App {
     text-align: center;
     background-color: #282c34;
@@ -14,7 +12,6 @@ ul {
     width: 100vw;
     min-height: 100vh;
   }
-  ​
   .Container {
     width: 100vw;
     padding: 20px 10px;
@@ -23,13 +20,13 @@ ul {
     justify-content: center;
     align-items: center;
   }
-  ​
   .Menu-item {
     color: white;
   }
-  ​
   .Menu-item-active {
     color: yellow;
     border-bottom: 0.4rem solid teal;
     cursor: not-allowed;
   }
+
+ 

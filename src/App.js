@@ -1,15 +1,13 @@
-/* import React, { Component } from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // Components
-import Clock from './components/Clock/Clock'
-import Counter from './components/Counter'
+
 import Card from './components/Card/Card'
 //import Button from './components/Button'
 //import Notes from './components/Notes'
 import Form from './components/Form'
 import ConditionalRendering from './components/ConditionalRendering'
-
 const data = [
   {
     'category': 'PSYCHOLOGY',
@@ -29,7 +27,6 @@ const data = [
   }
 ]
 export default class App extends Component {
-
   showCards() {
     return data.map(({
       category,
@@ -38,7 +35,6 @@ export default class App extends Component {
       author,
       publicationDate,
       readTime
-
     }) => {
       return (
         <Card
@@ -48,7 +44,6 @@ export default class App extends Component {
           author={author}
           publicationDate={publicationDate}
           readTime={readTime}
-
         />
       )
     })
@@ -61,8 +56,6 @@ export default class App extends Component {
           <h1>
             Holaaa!!- <strong>React</strong>
           </h1>
-          <Clock/> 
-          <Counter step={2} finalCounter={100} cutCounter={2}/>
           <Form/>
           <ConditionalRendering/>
         </header>
@@ -72,23 +65,8 @@ export default class App extends Component {
       </div>
     );
   }
-} */
+} 
 
-import React, {Component} from "react";
 
-//PAGES
-import Home from './Pages/Home'
 
-//CSS
-import "./App.css";
 
-export default class App extends Component{
-  render(){
-    return(
-      <div className="App">
-        <Home/>
-
-      </div>
-    );
-  }
-}
