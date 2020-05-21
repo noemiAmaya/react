@@ -1,25 +1,21 @@
-import React from "react";
-//Components
+import React from 'react'
+
+// CSS
+
+// components
 import Header from '../../components/Header'
 
-//css
-import './Home.css'
-
-
-function Home() {
-    return (
-        
-        <div className='container'>
-            <div>
-                <Header
-                title={'Hola Mundo'}
-                description={'Esto es una prueba'}
-                />
-            </div>
-        
-        </div>
-       
-    )
+function Home () {
+  return (
+    <div className='Container'>
+      <div>
+        <Header
+          title='Kodemia Modulo 3'
+          description='Esto es una prueba,estamos en Home'
+        />
+      </div>
+    </div>
+  )
 }
 
-export default Home;
+export default Home

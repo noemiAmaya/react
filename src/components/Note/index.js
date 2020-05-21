@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react'
+
 // CSS
 import './Note.css'
 
-function Note({ title, content }) {
+function Note ({ title, content }) {
   return (
-    <li className="note">
+    <li>
       <p><strong>{title}</strong></p>
       <p>{content}</p>
     </li>

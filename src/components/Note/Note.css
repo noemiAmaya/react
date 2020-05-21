@@ -4,15 +4,12 @@
     align-items: flex-start;
     justify-content: space-evenly;
 }
-​
 .note p {
     margin: 5px 0;
 }
-​
 ul li::before {
     color: white;
 }
-​
 p strong {
     color: lime;
 }
