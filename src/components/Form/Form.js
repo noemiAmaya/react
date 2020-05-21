@@ -4,9 +4,9 @@ export default class Form extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            mxp: "",
-            usd: "",
-            euro: ""
+            mxp: 0,
+            usd: 0,
+            euro: 0
         }
         this.handleInputCurrencyMxp = this.handleInputCurrencyMxp.bind(this);
         this.handleCurrencyUsd = this.handleCurrencyUsd.bind(this);
@@ -57,17 +57,19 @@ export default class Form extends Component {
         const { mxp, usd, euro } = this.state
         return (
             <div className="form-container">
+                Conversor de divisas
                 <form>
                     <input className='input-container'
                         value={mxp}
                         onChange={this.handleInputCurrencyMxp}
                         placeholder={'mxp'} />
 
+                    Dolares
                     <input className='input-container'
                         value={usd}
                         onChange={this.handleCurrencyUsd}
                         placeholder={'usd'} />
-
+                    Euros
                     <input className='input-container'
                         value={euro}
                         onChange={this.handleCurrencyEuro}

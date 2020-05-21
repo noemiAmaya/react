@@ -6,4 +6,9 @@
     font-weight: bolder;
     height: 25px;
     width: 160px;
+    margin-right: 30px;
+    
+}
+.form-container{
+    padding: 60px;
 }
