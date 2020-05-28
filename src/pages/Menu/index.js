@@ -1,28 +1,36 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from "react";
 
-// CSS
-import './Menu.css'
+import { Link } from "react-router-dom";
+
+// Css
+import "./Menu.css";
 
 export default class Menu extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      isMenuActive: false
-    }
-    this.handleToggleMenu = this.handleToggleMenu.bind(this)
+      isMenuActive: false,
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.logOut = this.logOut.bind(this)
   }
 
-  handleToggleMenu () {
-    const { isMenuActive } = this.state
+  toggleMenu() {
+    const { isMenuActive } = this.state;
     this.setState({
-      isMenuActive: !isMenuActive
-    })
+      isMenuActive: !isMenuActive,
+    });
   }
 
-  render () {
-    const { isMenuActive } = this.state
-    const menuClass = isMenuActive ? 'Menu-active' : ''
+  logOut() {
+    this.props.logOut()
+    this.toggleMenu()
+  }
+
+  render() {
+    const { isUserLogedIn } = this.props
+    const { isMenuActive } = this.state;
+    const menuClass = isMenuActive ? "Menu-active" : "";
     return (
       <div>
         <div className={`Menu ${menuClass}`}>
@@ -31,19 +39,37 @@ export default class Menu extends Component {
             <div>
               <ul>
                 <li>
-                  <Link to='/' onClick={this.handleToggleMenu}>Home</Link>
+                  <Link to="/" onClick={this.toggleMenu}>Home</Link>
                 </li>
+                {
+                  isUserLogedIn ? (
+                    <li>
+                      <Link to="/notes" onClick={this.toggleMenu}>Notas</Link>
+                    </li>
+                  ) : null
+                }
                 <li>
-                  <Link to='/notes' onClick={this.handleToggleMenu}>Notas</Link>
+                  <Link to="/currency-converter" onClick={this.toggleMenu}>Currency converter</Link>
                 </li>
+                {
+                  !isUserLogedIn ? (
+                    <li>
+                      <Link to="/login" onClick={this.toggleMenu}>Iniciar sesión</Link>
+                    </li>
+                  ) : (
+                      <li>
+                        <button onClick={this.logOut}>Cerrar sesión</button>
+                      </li>
+                    )
+                }
               </ul>
             </div>
           </nav>
         </div>
-        <button onClick={this.handleToggleMenu} className='Menu-button'>
-              Menu
+        <button onClick={this.toggleMenu} className="Menu-button">
+          Menu
         </button>
       </div>
-    )
+    );
   }
 }
